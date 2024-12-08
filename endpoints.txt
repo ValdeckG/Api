@@ -1,0 +1,80 @@
+User register - POST
+http://localhost:3333/api/user/register
+{
+    "name": "valdeck",
+    "address": "recife, PE",
+    "email": "valdeck@gmail.com",
+    "phone_number": "81 999999908",
+    "password": "14253678",
+    "confirmPassword": "14253678"
+}
+
+User login - POST
+http://localhost:3333/api/user/login
+{   
+    "email": "valdeck@gmail.com",  
+    "password": "14253678"
+}
+
+book create - POST
+http://localhost:3333/api/book
+{   
+    "title": "livro01",
+    "author": "valdeck",
+    "gender": "drama",
+    "year": "2024-11-26"
+}
+
+getall books - GET
+http://localhost:3333/api/books
+
+DELETE books - DELETE
+http://localhost:3333/api/book/ID
+
+update books - PUT
+http://localhost:3333/api/book/ID
+{     
+"title": "livro1",
+"author": "valdecks",
+"gender": "comedia",
+"year": "2024-11-26"
+}
+
+books management create - POST
+http://localhost:3333/api/bookmanagement
+{
+"type": "emprestimo",
+"management_date": "2024-12-11",
+"bookId": 1,
+"userId": 1   
+}
+
+books management getall - GET
+http://localhost:3333/api/booksmanagement
+
+books management update - PUT
+http://localhost:3333/api/bookmanagement/ID
+{
+
+"management_date": "2024-12-11T03:00:00.000Z",
+"return_date": null,
+"is_returned": false,
+"type": "emprestimo",
+"lendingid": null,  
+"bookId": 1,
+"userId": 1
+}
+
+books management delete - DELETE
+http://localhost:3333/api/bookmanagement/ID
+
+books management usersreport - GET
+http://localhost:3333/api/booksmanagement/usersreport
+
+books management booksreport - GET
+http://localhost:3333/api/booksmanagement/bookreport
+
+
+
+
+
